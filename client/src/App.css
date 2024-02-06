@@ -1,0 +1,18 @@
+
+.SignIn_sec{
+  border: 2px solid black;
+  /* box-sizing: border-box; */
+  /* display: inline; */
+}
+.btn{
+  width: 100%;
+}
+.formStyle{
+  
+  border: 2px solid  rgb(80, 105, 80);
+  height: 50%;
+  width: 40%;
+  margin: 3%;
+  /* text-align: center; */
+  
+}

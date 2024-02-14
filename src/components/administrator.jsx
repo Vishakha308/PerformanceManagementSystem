@@ -1,31 +1,18 @@
-
-
 import React, { useState } from 'react';
 import './administrator.css'; 
-
 function Staff() {
-  
   const [inputs, setInputs] = useState(Array.from({ length: 8 }, () => Array.from({ length: 5 }, () => '')));
-
-  
   const handleInputChange = (rowIndex, columnIndex, value) => {
     const newInputs = [...inputs];
     newInputs[rowIndex][columnIndex] = value;
     setInputs(newInputs);
   };
-
-  
   const handleSave = () => {
-    
     console.log('Inputs:', inputs);
   };
-
-  
   const handleReset = () => {
-    
     setInputs(Array.from({ length: 8 }, () => Array.from({ length: 5 }, () => '')));
   };
-
   return (
     <div className="staff-container">
       <h2 className="welcome">Welcome to the Administrator Page</h2>
@@ -57,5 +44,4 @@ function Staff() {
     </div>
   );
 }
-
 export default Staff;

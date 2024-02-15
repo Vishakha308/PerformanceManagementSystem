@@ -1,42 +1,38 @@
+// import React from "react";
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import Administrator from "./components/administrator";
+// import Staff from "./components/staff";
+// import "./App.css";
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+//     <Routes>
+//     <Route exact path='/components/administrator' element={<Administrator/>}/>
+//     <Route exact path='/components/staff' element={<Staff/>}/>
+//     <Route exact path='/' />
+//     </Routes>
+//     </BrowserRouter>
+//   );
+// }
+// export default App;
+
+
 import React from "react";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import BrowserRouter
+import Administrator from "./components/administrator";
+import Staff from "./components/staff";
 import "./App.css";
-import "./components/administrator";
-import background from "./assets/campusImage.webp";
-import manipalLogo from "./assets/manipalLogo.png";
+
 function App() {
-  const backgroundImage = {
-    backgroundImage: `url(${background})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "100vh", // Adjust the height as needed
-    display: "flex"
-  };
   return (
-    <div style={backgroundImage}>
-      <div className="formStyle">
-
-        <div className="manipalLogo">
-          <img src={manipalLogo} />
-        </div>
-
-        
-        <div className="formStyle-content">
-          <form>
-            <div> <label htmlFor="mailId ">Mail ID: </label> <input type="email"></input>@jaipur.manipal.edu </div>
-            <div>  <label htmlFor="password ">Password</label>
-            <input type="password"></input></div>
-          </form>
-        </div>
-        <div className="SignIn_sec">
-          <div className="btn">
-            <button>Sign In as Administrator</button>
-          </div>
-          <div className="btn">
-            <button>Sign In as Staff</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter> {/* Use BrowserRouter here */}
+      <Routes>
+        <Route exact path='/components/administrator' element={<Administrator/>}/>
+        <Route exact path='/components/staff' element={<Staff/>}/>
+        <Route exact path='/' />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './administrator.css'; 
-function Staff() {
+import './Staff.css'; 
+function Staff() { 
   const [inputs, setInputs] = useState(Array.from({ length: 8 }, () => Array.from({ length: 5 }, () => '')));
   const handleInputChange = (rowIndex, columnIndex, value) => {
     const newInputs = [...inputs];
@@ -15,13 +15,13 @@ function Staff() {
   };
   return (
     <div className="staff-container">
-      <h2 className="welcome">Welcome to the Administrator Page</h2>
+      <h2 className="welcome">Welcome to the Staff Page</h2>
       <div className="table">
         <div className="row heading">
-          <input type="text" defaultValue="Task" />
-          <input type="text" defaultValue="Target To be achived" />
-          <input type="text" defaultValue="Department" />
-          <input type="text" defaultValue="Task completed in 2024" />
+          <input type="text" defaultValue="Headings 1" />
+          <input type="text" defaultValue="Target" />
+          <input type="text" defaultValue="Previous Year" />
+          <input type="text" defaultValue="2024" />
           <input type="text" defaultValue="KPI" />
         </div>
         {inputs.map((row, rowIndex) => (
